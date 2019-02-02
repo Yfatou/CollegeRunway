@@ -1,14 +1,14 @@
 {
   "development": {
-    "username": "root",
-    "password": null,
+    "username": "project2",
+    "password": "collegerunway",
     "database": "exampledb",
     "host": "localhost",
     "dialect": "mysql"
   },
   "test": {
-    "username": "root",
-    "password": null,
+    "username": "project2",
+    "password": "collegerunway",
     "database": "testdb",
     "host": "localhost",
     "dialect": "mysql",
