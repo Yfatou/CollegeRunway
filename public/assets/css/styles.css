@@ -1,3 +1,43 @@
 .list-group-item {
   line-height: 2.5;
 }
+
+.container {
+  width: auto;
+  margin: 0 auto;
+  margin-top: 10px;
+}
+
+body {
+  /* background-color: blue; */
+background-image: url('../images/runway6.jpg');
+background-position: center;
+background-size: cover;
+font-family: 'Luckiest Guy', cursive;
+text-shadow: 2px 2px 6px white;
+}
+
+.jumbotron {
+  background-image: url('../images/carpet1.jpg');
+  background-color: aqua;
+  background-position: left top;
+  background-repeat: repeat;
+  color: red;
+  text-shadow: 2px 2px 6px white;
+} 
+
+.top-section, .lower-section{
+text-align: center; 
+}
+#label {
+color: black;
+font-size: 26px;
+}
+
+ul {
+  font-size: 26px;
+list-style-type: none;
+margin-left: 36px;
+padding: 50;
+
+}
