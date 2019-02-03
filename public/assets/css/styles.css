@@ -5,11 +5,10 @@
 .container {
   width: auto;
   margin: 0 auto;
-  margin-top: 10px;
+  margin-top: 0px;
 }
 
 body {
-  /* background-color: blue; */
 background-image: url('../images/runway6.jpg');
 background-position: center;
 background-size: cover;
@@ -17,13 +16,63 @@ font-family: 'Luckiest Guy', cursive;
 text-shadow: 2px 2px 6px white;
 }
 
-.jumbotron {
+.sub-main-font-size {
+  font-size: 44px;
+  color: blue;
+  text-shadow: 2px 2px 6px black;
+}
+
+header {
   background-image: url('../images/carpet1.jpg');
-  background-color: aqua;
+  font-family: 'Oleo Script Swash Caps', cursive;
+  color: white;
+  text-shadow: 2px 2px 6px black;
+  font-size: 90px;
+  text-align: center;
+  height: 160px;
+  padding: 10px;
+  margin-bottom: 20px;
+  margin-top: 20px;
+  margin-left: 0px;
+}
+
+
+div.slide-left {
+  width:100%;
+  overflow:hidden;
+}
+div.slide-left header {
+  animation: slide-left 2s;
+}
+
+@keyframes slide-left {
+  from {
+    margin-left: 100%;
+    width: 300%; 
+  }
+
+  to {
+    margin-left: 0%;
+    width: 100%;
+  }
+}
+
+
+.jumbotron {
+  /* font-family: 'Elsie Swash Caps', cursive; */
+  /* font-family: 'Cinzel Decorative', cursive; */
+  /* font-family: 'Princess Sofia', cursive; */
+  /* font-family: 'Sail', cursive; */
+  font-family: 'Oleo Script Swash Caps', cursive;
+  /* font-family: 'Playfair Display SC', serif; */
+  background-image: url('../images/carpet1.jpg');
   background-position: left top;
   background-repeat: repeat;
-  color: red;
-  text-shadow: 2px 2px 6px white;
+  font-size: 94px;
+  color: white;
+  text-shadow: 2px 2px 6px black;
+ 
+  
 } 
 
 .top-section, .lower-section{
