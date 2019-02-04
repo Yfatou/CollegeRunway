@@ -3,16 +3,22 @@
 }
 
 .container {
-  max-width: 1500px;
-  /* width: auto; */
+  background-image: url('../images/runway6.jpg');
+background-position:bottom;
+background-position: left;
+background-size: cover;
+
+  max-width: 1600px;
+  max-height: 640px;
   margin: 0 auto;
   margin-top: 0px;
+  margin-bottom: 50px;
 }
 
 .survey-container {
   max-width: 1000px;
   height: 300px;
-  padding: 15px;
+  padding: 10px;
   margin-left: 265px;
   background-color: black;
   font-family: 'Courgette', cursive;
@@ -25,10 +31,10 @@
 
 
 body {
-background-image: url('../images/runway6.jpg');
+/* background-image: url('../images/runway6.jpg'); */
 /* background-position: center; */
-background-position: left;
-background-size: cover;
+/* background-position: left; */
+/* background-size: cover; */
 
 }
 
@@ -76,6 +82,28 @@ div.slide-left header {
     width: 100%;
   }
 }
+
+.seasonalcontainer {
+  max-width: 1500px;
+  max-height: 400px;
+  margin: 0 auto;
+  margin-top: 0px;
+  font-size: 70px;
+  text-align: center;
+}
+
+
+
+.springbody {
+  /* background-color: azure; */
+    background-image: url('../images/runway4.jpg');
+    /* background-position: center; */
+    background-position: left;
+    background-size: cover;
+}
+
+
+
 
 
 .jumbotron {

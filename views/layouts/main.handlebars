@@ -13,7 +13,9 @@
     <!-- Optional theme -->
     {{!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css"> --}}
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
-
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js" integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js" integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k" crossorigin="anonymous"></script>
 
   {{!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.3/css/bootstrap.min.css"> --}}
   <link rel="stylesheet" href="/assets/css/styles.css" media="screen" title="no title" charset="utf-8">
@@ -31,7 +33,7 @@
     <div class="slide-left">
       <header> College Runway</header>
     </div>
-</div>
+
 
 
 
@@ -45,16 +47,16 @@
 
  
                     <div class="row">
-                        <div class="col-md-5">Please select your school. </div>
-                        <div class="col-md-2"></div>
-                        <div class="col-md-5">Pick your favorite season! </div>
+                        <div class="col-md-12">Tell us where you go to school and what clothing trends most influence you.
+                        </div>
                     </div>
-                  <form>
-                           <div class="form-group">
+
+                          <form>
+                            <div class ="col-md-6"></div>
+                              <div class="form-group col-md-8">
                                 <label for="collegevalidation"></label>
-                                <div class="col-md-5">
-                                    <select id="myselect" class="form-control" id="collegevalidation" placeholder="State">
-                                        <option value="">SCHOOL</option>
+                                      <select id="myselect" class="form-control" id="collegevalidation" placeholder="State">
+                                        <option value="">I attend ...</option>
                                         <option value="AK">Alaska</option>
                                         <option value="AL">Alabama</option>
                                         <option value="AR">Arkansas</option>
@@ -63,37 +65,37 @@
                                         <option value="CO">Colorado</option>
                                         <option value="CT">Connecticut</option>
                                       </select>
-                                </div>
-
-                            <div  class="col-md-5">
-                          <div class="dropdown">
-                            <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                           SEASON
-                        </button>
-                        <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                          <a class="dropdown-item" href="#top">Action</a>
-                          <a class="dropdown-item" href="#">Another action</a>
-                          <a class="dropdown-item" href="#">Something else here</a>
-                        </div>
-                      </div>    
-                      </div>
-
-                            </div>
+                                    </div>
+                              </form>
                         
+                                          
+                         
+                  
+                          <div>
+                             <form>
+                            <div class ="col-md-6"></div>
+                              <div class="form-group col-md-8">
+                                <label for="collegevalidation"></label>
+                                      <select id="myselect" class="form-control" id="collegevalidation" placeholder="State">
+                                        <option value="">Click here to choose your favorite season for fashion!</option>
+                                        <option value="AK">Spring</option>
+                                        <option value="AL">Summer</option>
+                                        <option value="AR">Autumn</option>
+                                        <option value="AZ">Winter</option>
+                                        </select>
+                                    </div>
+                              </form>
+                          </div>
                         
-
-
-
                           
                         <button type="button" class="btn btn-light" type="submit" id="searchBtn">Submit</button>
                         </div>
-                        </div>
-                </form>
+                      
+              
 
 
+ </div>
 
- 
-</div>
 
 {{!-- <body> --}}
   {{!-- {{{body}}} --}}
@@ -102,3 +104,21 @@
 </html>
 
 
+  {{!-- <div  class="col-md-12">
+                          <div class="dropdown">
+                          <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                Click here to choose your favorite season for fashion!
+                              </button>
+                              <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                                <a class="dropdown-item" href="#">Spring</a>
+                                <a class="dropdown-item" href="#">Summer</a>
+                                <a class="dropdown-item" href="#">Autumn</a>
+                                <a class="dropdown-item" href="#">Winter</a>
+                              </div>
+                            </div>
+                        </div>
+                      </div>    
+                      </div>
+
+                            </div>
+                         --}}
