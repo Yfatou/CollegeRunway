@@ -1,10 +1,10 @@
 var db = require("../models");
 
 module.exports = function(app) {
-  // Get all examples
-  app.get("/api/examples", function(req, res) {
-    db.Example.findAll({}).then(function(dbExamples) {
-      res.json(dbExamples);
+  // Get all colleges and universities name
+  app.get("/api/colleges", function(req, res) {
+    db.Universities.findAll({}).then(function(dbColleges) {
+      res.json(dbColleges);
     });
   });
 
