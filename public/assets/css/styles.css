@@ -3,23 +3,43 @@
 }
 
 .container {
-  width: auto;
+  max-width: 1500px;
+  /* width: auto; */
   margin: 0 auto;
   margin-top: 0px;
 }
 
-body {
-background-image: url('../images/runway6.jpg');
-background-position: center;
-background-size: cover;
-font-family: 'Luckiest Guy', cursive;
-text-shadow: 2px 2px 6px white;
+.survey-container {
+  max-width: 1000px;
+  height: 300px;
+  padding: 15px;
+  margin-left: 265px;
+  background-color: black;
+  font-family: 'Courgette', cursive;
+  color: white;
+  text-shadow: 2px 2px 6px whitesmoke;
+  text-align: center;
+  font-size: 24px;
+
 }
 
-.sub-main-font-size {
-  font-size: 44px;
-  color: blue;
+
+body {
+background-image: url('../images/runway6.jpg');
+/* background-position: center; */
+background-position: left;
+background-size: cover;
+
+}
+
+.col-sm-12 {
+  font-size: 34px;
+  font-family: 'Oleo Script Swash Caps', cursive;
+  color: white;
   text-shadow: 2px 2px 6px black;
+  text-align: center;
+  margin-bottom: 60px;
+  
 }
 
 header {
@@ -29,7 +49,7 @@ header {
   text-shadow: 2px 2px 6px black;
   font-size: 90px;
   text-align: center;
-  height: 160px;
+  height: 140px;
   padding: 10px;
   margin-bottom: 20px;
   margin-top: 20px;
