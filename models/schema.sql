@@ -4,17 +4,27 @@
 -- DROP DATABASE IF EXISTS testdb;
 -- CREATE DATABASE testdb;
 
--- DROP DATABASE IF EXISTS collegerunway_db;
+DROP DATABASE IF EXISTS collegerunway_db;
 -- creates collegrunway_db
 CREATE DATABASE collegerunway_db;
 
 USE collegerunway_db;
 
-INSERT INTO Universities (name,createdAt,updatedAt)
-VALUES ("Harvard University", curdate());
+INSERT INTO brands (colleges,seasons,brands,categories,createdAt,updatedAt)
+VALUES ("Harvard University","Winter","American Eagle","Shoes", curdate(), curdate());
 
-INSERT INTO Universities (name, createdAt,updatedAt)
-VALUES ("Yale University", curdate(), curdate());
+INSERT INTO brands (colleges,seasons,brands,categories,createdAt,updatedAt)
+VALUES ("Stanford","Summer","Nike","Shoes", curdate(), curdate());
 
-INSERT INTO Universities (name,createdAt,updatedAt)
-VALUES ("Stanford University", curdate(),curdate());
+INSERT INTO brands (colleges,seasons,brands,categories,createdAt,updatedAt)
+VALUES ("Northwestern","Fall","American Eagle","Tops", curdate(), curdate());
+
+
+INSERT INTO brands (colleges,seasons,brands,categories,createdAt,updatedAt)
+VALUES ("Yale","Fall","American Eagle","Tops", curdate(), curdate());
+
+
+INSERT INTO brands (colleges,seasons,brands,categories,createdAt,updatedAt)
+VALUES ("University of IL","Fall","American Eagle","Tops", curdate(), curdate());
+
+
