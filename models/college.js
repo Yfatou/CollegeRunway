@@ -1,15 +1,15 @@
 module.exports = function(sequelize, DataTypes) {
-  var College = sequelize.define("College", {
+  var Colleges = sequelize.define("Colleges", {
     name: DataTypes.STRING
   });
 
-  College.associate = function(models) {
+  Colleges.associate = function(models) {
     // Associating Author with Posts
     // When an Author is deleted, also delete any associated Posts
-    College.hasMany(models.Brand, {
+    Colleges.hasMany(models.Brands, {
       onDelete: "cascade"
     });
   };
 
-  return College;
+  return Colleges;
 };
