@@ -4,12 +4,13 @@
 
 .container {
   background-image: url('../images/runway6.jpg');
-background-position:bottom;
-background-position: left;
-background-size: cover;
-
+  background-position:bottom;
+  background-position: left;
+  background-size: cover;
+  width: 100%;
+  height: 100%;
   max-width: 1600px;
-  max-height: 640px;
+  /* max-height: 640px; */
   margin: 0 auto;
   margin-top: 0px;
   margin-bottom: 50px;
@@ -17,7 +18,7 @@ background-size: cover;
 
 .survey-container {
   max-width: 1000px;
-  height: 300px;
+  height: 400px;
   padding: 10px;
   margin-left: 265px;
   background-color: black;
@@ -30,21 +31,33 @@ background-size: cover;
 }
 
 
-body {
-/* background-image: url('../images/runway6.jpg'); */
-/* background-position: center; */
-/* background-position: left; */
-/* background-size: cover; */
-
-}
-
 .col-sm-12 {
-  font-size: 34px;
+  font-size: 38px;
+  font-family: 'Oleo Script Swash Caps', cursive;
+  color: white;
+  /* text-shadow: 2px 2px 6px black; */
+  text-align: center;
+  margin-bottom: 10px;
+  margin-top: 10px;
+  
+}
+/* .col-md-12 {
+  font-size: 30px;
   font-family: 'Oleo Script Swash Caps', cursive;
   color: white;
   text-shadow: 2px 2px 6px black;
   text-align: center;
-  margin-bottom: 60px;
+  margin-bottom: 10px;
+   */
+/* } */
+
+.surveytitle {
+  font-size: 30px;
+  font-family: 'Oleo Script Swash Caps', cursive;
+  color: white;
+  text-shadow: 2px 2px 6px black;
+  text-align: right;
+  margin-bottom: 15px;
   
 }
 
@@ -62,6 +75,7 @@ header {
   margin-left: 0px;
 }
 
+/* This is where banner slide in from right ------------------------- */
 
 div.slide-left {
   width:100%;
@@ -82,46 +96,107 @@ div.slide-left header {
     width: 100%;
   }
 }
+/* End slide ---------------------------------- */
+
 
 .seasonalcontainer {
-  max-width: 1500px;
-  max-height: 400px;
+  /* max-width: 1600px; */
+  /* height: 100%; */
   margin: 0 auto;
-  margin-top: 0px;
+  margin-top: 20px;
   font-size: 70px;
   text-align: center;
-}
-
-
-
-.springbody {
-  /* background-color: azure; */
-    background-image: url('../images/runway4.jpg');
-    /* background-position: center; */
-    background-position: left;
-    background-size: cover;
-}
-
-
-
-
-
-.jumbotron {
-  /* font-family: 'Elsie Swash Caps', cursive; */
-  /* font-family: 'Cinzel Decorative', cursive; */
-  /* font-family: 'Princess Sofia', cursive; */
-  /* font-family: 'Sail', cursive; */
   font-family: 'Oleo Script Swash Caps', cursive;
-  /* font-family: 'Playfair Display SC', serif; */
-  background-image: url('../images/carpet1.jpg');
-  background-position: left top;
-  background-repeat: repeat;
-  font-size: 94px;
   color: white;
-  text-shadow: 2px 2px 6px black;
+  text-shadow: 5px 5px 9px black;
+  border: 1px blue;
+}
+
+.springcontainer {
+  background-image: url('../images/spring1.jpg');
+  background-position: left;
+/* background-size: cover; */
+}
+
+.summercontainer {
+  background-image: url('../images/summer3.jpg');
+  background-position: left;
+background-size: cover;
+background-repeat: no-repeat;
+}
+
+.autumncontainer {
+  background-image: url('../images/autumn1.jpg');
+  background-position: left;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.wintercontainer {
+  background-image: url('../images/winter1.jpg');
+   
+  background-position: left;
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 100%;
  
-  
-} 
+}
+
+
+.resultspageoutercontainer{
+
+  background-image: url('../images/plaid1.jpg');
+  background-position: left; 
+
+}
+
+
+.resultspagecontainer {
+  /* background-image: url('../images/finalpagebg1.jpg'); */
+  background-color: cornflowerblue;
+  background-position: left;
+  /* background-size: cover; */
+  /* background-repeat: no-repeat; */
+  max-width: 1200px;
+  max-height: 1000px;
+  /* margin: 0 auto; */
+  /* margin-top: 130px; */
+  margin-left: 150px;
+  font-size: 50px;
+  text-align: center;
+  font-family: 'Oleo Script Swash Caps', cursive;
+  color: white;
+  text-shadow: 5px 5px 9px black;
+  padding: 30px;
+}
+
+
+.normalfont{
+  font-family: 'Montserrat', sans-serif;
+  background-color: brown;
+  color: white;
+  font-size: 70px;
+}
+
+.brandselection {
+  /* background-image: url('../images/palegreenbg.png') */
+  /* background-color: rgb(97, 22, 235); */
+    /* background-image: url('../images/runway4.jpg'); */
+    /* background-position: center; */
+    /* background-position: left; */
+    /* background-size: cover; */
+    max-width: 1300px;
+    height:auto;
+    max-height: 1300px;
+    padding: 20px;
+    margin-left: 108px;
+    font-size: 20px;
+}
+
+.col-sm-3 {
+text-align: center;
+  font-size: 16px;
+}
 
 .top-section, .lower-section{
 text-align: center; 
