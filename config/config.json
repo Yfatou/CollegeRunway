@@ -2,7 +2,7 @@
   "development": {
     "username": "project2",
     "password": "collegerunway",
-    "database": "exampledb",
+    "database": "collegerunway_db",
     "host": "localhost",
     "dialect": "mysql"
   },
