@@ -14,6 +14,15 @@ module.exports = function(app) {
     });
   });
 
+  app.post("/api/adduser", function(req, res) {
+    console.log(req.body);
+    db.UserTable.create(req.body).then(function(dbUserTable) {
+
+      console.log(dbUserTable);
+
+      res.json(dbUserTable);
+    });
+  });
   // app.get("/api/brands/:colegeId", function (req, res) {
   //   db.Brand.findOne({ where: {
   //     collegeId: req.params.collegeId

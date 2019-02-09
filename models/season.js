@@ -3,12 +3,10 @@ module.exports = function(sequelize, DataTypes) {
     seasonname: DataTypes.STRING
   });
   SeasonTable.associate = function(models) {
-    // We're saying that a Post should belong to an Author
-    // A Post can't be created without an Author due to the foreign key constraint
-    SeasonTable.belongsTo(models.Colleges, {
-      foreignKey: {
-        allowNull: false
-      }
+    // Associating Author with Posts
+    // When an Author is deleted, also delete any associated Posts
+    SeasonTable.hasMany(models.UserTable, {
+      onDelete: "cascade"
     });
   };
 
