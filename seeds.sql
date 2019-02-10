@@ -1,87 +1,77 @@
-INSERT INTO Brands (brands,seasons,items,createdAt,updatedAt,CollegeId)
-VALUES ("American Eagle","Winter","Shoes", curdate(), curdate());
+Create database collegerunway_db;
+USE collegerunway_db;
 
-INSERT INTO Brands (brands,seasons,items,createdAt,updatedAt)
-VALUES ("Nike","Summer","Shoes", curdate(), curdate());
+CREATE TABLE Colleges (
 
-INSERT INTO Brands (brands,seasons,items,createdAt,updatedAt)
-VALUES ("Adidas","Fall","Shoes", curdate(), curdate());
+  id int NOT NULL AUTO_INCREMENT,
+  `college_name` varchar(255) NOT NULL,
+  PRIMARY KEY (id)
+);
 
-INSERT INTO Brands (brands,seasons,items,createdAt,updatedAt)
-VALUES ("H&M","Winter","Accessories", curdate(), curdate());
 
-INSERT INTO Brands (brands,seasons,items,createdAt,updatedAt)
-VALUES ("Hollister","Fall","Tops", curdate(), curdate());
-
-INSERT INTO Brands (brands,seasons,items,createdAt,updatedAt)
-VALUES ("PacSun","Spring","Bottoms", curdate(), curdate());
-
-INSERT INTO Brands (brands,seasons,items,createdAt,updatedAt)
-VALUES ("Forever 21","Winter","Tops", curdate(), curdate());
-
-INSERT INTO Brands (brands,seasons,items,createdAt,updatedAt)
-VALUES ("American Eagle","Summer","Shoes", curdate(), curdate());
-
-INSERT INTO Brands (brands,seasons,items,createdAt,updatedAt)
-VALUES ("American Eagle","Summer","Bottoms", curdate(), curdate());
-
-INSERT INTO Brand (brands,seasons,items,createdAt,updatedAt)
-VALUES ("Adidas","Summer","Shoes", curdate(), curdate());
-
-INSERT INTO Brand (brands,seasons,items,createdAt,updatedAt)
-VALUES ("H&M","Fall","Shoes", curdate(), curdate());
-
-INSERT INTO Brands (brands,seasons,items,createdAt,updatedAt)
-VALUES ("Urban Outfitters","Fall","Tops", curdate(), curdate());
-
-INSERT INTO Brands (brands,seasons,items,createdAt,updatedAt)
-VALUES ("Urban Outfitters","Spring","Shoes", curdate(), curdate());
+INSERT INTO Colleges (college_name)
+VALUES 
+("Stanford"),
+ ("Harvard"),
+("Northwestern"),
+ ("Yale University"),
+ ("UIC")
 
 
 
 
--- -----------------------------------------------
+ CREATE TABLE Brands (
+
+  id int NOT NULL AUTO_INCREMENT,
+  `brand_name` varchar(255) NOT NULL,
+  PRIMARY KEY (id)
+);
+
+
+INSERT INTO Brands (brand_name)
+VALUES 
+("Forever 21"),
+ ("Adidas"),
+("Nike"),
+ ("Hollister"),
+ ("H&M")
 
 
 
 
-INSERT INTO Colleges (name,createdAt,updatedAt)
-VALUES ("Stanford", curdate(), curdate());
+CREATE TABLE Seasons (
 
-INSERT INTO Colleges (name,createdAt,updatedAt)
-VALUES ("Harvard", curdate(), curdate());
-
-INSERT INTO Colleges (name,createdAt,updatedAt)
-VALUES ("Northwestern", curdate(), curdate());
-
-INSERT INTO Colleges (name,createdAt,updatedAt)
-VALUES ("Yale University", curdate(), curdate());
-
-INSERT INTO Colleges (name,createdAt,updatedAt)
-VALUES ("Duke University", curdate(), curdate());
-
-INSERT INTO Colleges (name,createdAt,updatedAt)
-VALUES ("Cornell University", curdate(), curdate());
-
-INSERT INTO Colleges (name,createdAt,updatedAt)
-VALUES ("Georgetown University", curdate(), curdate());
-
-INSERT INTO College (name,createdAt,updatedAt)
-VALUES ("Columbia University", curdate(), curdate());
-
-INSERT INTO Colleges (name,createdAt,updatedAt)
-VALUES ("University of Chicago", curdate(), curdate());
-
-INSERT INTO Colleges (name,createdAt,updatedAt)
-VALUES ("Wellesley College", curdate(), curdate());
-
-INSERT INTO Colleges (name,createdAt,updatedAt)
-VALUES ("University of California,LA", curdate(), curdate());
-
-INSERT INTO Colleges (name,createdAt,updatedAt)
-VALUES ("Carleton College", curdate(), curdate());
-
-INSERT INTO Colleges (name,createdAt,updatedAt)
-VALUES ("Boston College", curdate(), curdate());
+  id int NOT NULL AUTO_INCREMENT,
+  `season_name` varchar(255) NOT NULL,
+  PRIMARY KEY (id)
+);
 
 
+INSERT INTO seasons (season_name)
+VALUES 
+("Winter"),
+ ("Summer"),
+("Fall"),
+ ("Autumn")
+
+
+ CREATE TABLE Users (
+
+  id int NOT NULL AUTO_INCREMENT,
+  collegesid int Not null,
+  seasonsid int not null,
+  brandsid int not null,
+  shirtsid int not null,
+  pantsid int not null,
+  shoesid int not null,
+  accessoriesid int not null,
+  PRIMARY KEY (id),
+
+
+foreign KEY (collegesid) references Colleges(id),
+foreign key (seasonsid) references Seasons(id),
+foreign key (shirtsid) references Brands(id),
+foreign key (pantsid) references Brands(id),
+foreign key (shoesid) references Brands(id),
+foreign key (accessoriesid) references Brands(id)
+);
