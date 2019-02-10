@@ -255,7 +255,7 @@ if(pathArray[1] === "resultspage"){
     for(var i=0;i< data.length;i++)
     {
      $("#bottoms").append("<h3>College:"+data[i].name+"</h3>");
-     $("#bottoms").append("<h3>bottoms:"+data[i].Tops+"</h3>");
+     $("#bottoms").append("<h3>bottoms:"+data[i].bottoms+"</h3>");
      $("#bottoms").append("<h3>Total: "+data[i].Total+"</h3>");
      $("#bottoms").append("<hr>");
     }
@@ -267,7 +267,7 @@ if(pathArray[1] === "resultspage"){
     for(var i=0;i< data.length;i++)
     {
      $("#shoes").append("<h3>College:"+data[i].name+"</h3>");
-     $("#shoes").append("<h3>shoes:"+data[i].Tops+"</h3>");
+     $("#shoes").append("<h3>shoes:"+data[i].shoes+"</h3>");
      $("#shoes").append("<h3>Total: "+data[i].Total+"</h3>");
      $("#shoes").append("<hr>");
     }
@@ -279,7 +279,7 @@ if(pathArray[1] === "resultspage"){
     for(var i=0;i< data.length;i++)
     {
      $("#accessories").append("<h3>College:"+data[i].name+"</h3>");
-     $("#accessories").append("<h3>accessories:"+data[i].Tops+"</h3>");
+     $("#accessories").append("<h3>accessories:"+data[i].Accessories+"</h3>");
      $("#accessories").append("<h3>Total: "+data[i].Total+"</h3>");
      $("#accessories").append("<hr>");
     }
