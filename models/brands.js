@@ -1,18 +1,15 @@
 module.exports = function(sequelize, DataTypes) {
   var Brands = sequelize.define("Brands", {
     brands: DataTypes.STRING,
-    seasons: DataTypes.STRING,
-    items: DataTypes.STRING
+     brandid:  DataTypes.INTEGER
   });
-  Brands.associate = function(models) {
-    // We're saying that a Post should belong to an Author
-    // A Post can't be created without an Author due to the foreign key constraint
-    Brands.belongsTo(models.Colleges, {
-      foreignKey: {
-        allowNull: false
-      }
-    });
-  };
-
+  // Brands.associate = function(models) {
+  //   // Associating Author with Posts
+  //   // When an Author is deleted, also delete any associated Posts
+  //  Brands.hasMany(models.UserTable, {
+  //     onDelete: "cascade"
+  //   });
+  // };
+ 
   return Brands;
 };

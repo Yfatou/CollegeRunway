@@ -1,7 +1,10 @@
 .list-group-item {
   line-height: 2.5;
 }
-
+.resultcss{
+  background-color: black;
+  color:gray;
+}
 .container {
   background-image: url('../images/runway6.jpg');
   background-position:bottom;
