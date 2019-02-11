@@ -43,7 +43,7 @@ module.exports = function(app) {
   
 
         // index route loads view.html
-        app.get("/resultspage", function(req, res) {
+        app.get("/resultspage/:collegeid", function(req, res) {
           res.sendFile(path.join(__dirname, "../views/resultspage.html"));
         });
       

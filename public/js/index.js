@@ -10,13 +10,13 @@ var $submitButtonId = $("#submitButtonId");
 
 // The API object contains methods for each kind of request we'll make
 var API = {
-  displayResult: function(url){
+  displayResult: function (url) {
     return $.ajax({
       headers: {
         "Content-Type": "application/json"
       },
       type: "GET",
-      url: url 
+      url: url
     });
   },
   saveTables: function (example, url) {
@@ -173,7 +173,8 @@ var handleFormSubmit = function (event) {
     seasonTableId: $seasonselect.val()
   };
 
-
+  sessionStorage.setItem("collegename", $("#collegeselect option:selected").text().trim());
+  
   API.saveTables(userTable, "/api/adduser").then(function (data) {
     // refreshExamples();
 
@@ -212,78 +213,110 @@ var handleDeleteBtnClick = function () {
 };
 
 var handleFormSeasonSubmit = function () {
-  
+
   var BrandChoice = {
-   Tops: $("#top").val() ,
-    Bottoms:  $("#bottom").val(),
-    Shoes:  $("#shoe").val(),
-    Accessories:  $("#accessory").val()
+    Tops: $("#top").val(),
+    Bottoms: $("#bottom").val(),
+    Shoes: $("#shoe").val(),
+    Accessories: $("#accessory").val()
   };
 
 
 
- //alert(pathArray[1]+" "+pathArray[2]);
- var season=pathArray[1];
- var id =pathArray[2];
-  API.updateTables(BrandChoice, "/api/"+season+"/" + id).then(function (data) {
+  //alert(pathArray[1]+" "+pathArray[2]);
+  var season = pathArray[1];
+  var id = pathArray[2];
+  API.updateTables(BrandChoice, "/api/" + season + "/" + id).then(function (data) {
     // refreshExamples();
-
-    location.href = "/resultspage";
-
   });
+
+  API.getPage("/api/college/" + id).then(function (data) {
+
+    location.href = "/resultspage/" + data.CollegeId;
+  });
+
+
 };
 // Add event listeners to the submit and delete buttons
 $submitBtn.on("click", handleFormSubmit);
 // $exampleList.on("click", ".delete", handleDeleteBtnClick);
 $submitButtonId.on("click", handleFormSeasonSubmit);
 
-if(pathArray[1] === "resultspage"){
-  API.displayResult("/api/results/mosttopsview").then(function(data) {
-   
-   for(var i=0;i< data.length;i++)
-   {
-    $("#tops").append("<h3>College:"+data[i].name+"</h3>");
-    $("#tops").append("<h3>Tops:"+data[i].Tops+"</h3>");
-    $("#tops").append("<h3>Total: "+data[i].Total+"</h3>");
-    $("#tops").append("<hr>");
-   }
-   
+if (pathArray[1] === "resultspage") {
+ 
+  var collegename=sessionStorage.getItem("collegename");
+  $("#tops").append("<h3>" + collegename + "</h3>");
+  var temptotal = 0;
+  API.displayResult("/api/results/mosttopsview").then(function (data) {
+    var collegeid = pathArray[2];
+    for (var i = 0; i < data.length; i++) {
+       if (   data[i].name  === collegename) {
+
+     //   if (parseInt(data[i].Total) > temptotal) {
+        temptotal = parseInt(data[i].Total);
+         
+      
+        $("#tops").append("<h3>Tops:" + data[i].Tops + "</h3>");
+        $("#tops").append("<h3>Total: " + data[i].Total + "</h3>");
+        $("#tops").append("<hr>");
+
+
+      }
+
+    }
+
     console.log(data);
   });
+  temptotal = 0;
+  API.displayResult("/api/results/mostbottomsview").then(function (data) {
 
-  API.displayResult("/api/results/mostbottomsview").then(function(data) {
-    for(var i=0;i< data.length;i++)
-    {
-     $("#bottoms").append("<h3>College:"+data[i].name+"</h3>");
-     $("#bottoms").append("<h3>bottoms:"+data[i].bottoms+"</h3>");
-     $("#bottoms").append("<h3>Total: "+data[i].Total+"</h3>");
-     $("#bottoms").append("<hr>");
+
+    for (var i = 0; i < data.length; i++) {
+      if (   data[i].name  === collegename){
+       // if (parseInt(data[i].Total) > temptotal) {
+        temptotal = parseInt(data[i].Total);
+        // $("#bottoms").append("<h3>College:" + data[i].name + "</h3>");
+        $("#bottoms").append("<h3>bottoms: " + data[i].bottoms + "</h3>");
+        $("#bottoms").append("<h3>Total: " + data[i].Total + "</h3>");
+        $("#bottoms").append("<hr>");
+      }
+
+      // }
+
     }
-    
-     console.log(data);
+
+    console.log(data);
   });
-
-  API.displayResult("/api/results/mostshoesview").then(function(data) {
-    for(var i=0;i< data.length;i++)
-    {
-     $("#shoes").append("<h3>College:"+data[i].name+"</h3>");
-     $("#shoes").append("<h3>shoes:"+data[i].shoes+"</h3>");
-     $("#shoes").append("<h3>Total: "+data[i].Total+"</h3>");
-     $("#shoes").append("<hr>");
+  temptotal = 0;
+  API.displayResult("/api/results/mostshoesview").then(function (data) {
+    for (var i = 0; i < data.length; i++) {
+      if (  data[i].name  === collegename){
+      //  if (parseInt(data[i].Total) > temptotal) {
+        temptotal = parseInt(data[i].Total);
+        // $("#shoes").append("<h3>College:" + data[i].name + "</h3>");
+        $("#shoes").append("<h3>shoes:" + data[i].shoes + "</h3>");
+        $("#shoes").append("<h3>Total: " + data[i].Total + "</h3>");
+        $("#shoes").append("<hr>");
+     // }
+      }
     }
-    
-     console.log(data);
+
+    console.log(data);
   });
-
-  API.displayResult("/api/results/mostaccessoriesview").then(function(data) {
-    for(var i=0;i< data.length;i++)
-    {
-     $("#accessories").append("<h3>College:"+data[i].name+"</h3>");
-     $("#accessories").append("<h3>accessories:"+data[i].Accessories+"</h3>");
-     $("#accessories").append("<h3>Total: "+data[i].Total+"</h3>");
-     $("#accessories").append("<hr>");
+  temptotal = 0;
+  API.displayResult("/api/results/mostaccessoriesview").then(function (data) {
+    for (var i = 0; i < data.length; i++) {
+      if (   data[i].name  === collegename){
+     // if (parseInt(data[i].Total) > temptotal) {
+        temptotal = parseInt(data[i].Total);
+        // $("#accessories").append("<h3>College:" + data[i].name + "</h3>");
+        $("#accessories").append("<h3>accessories:" + data[i].Accessories + "</h3>");
+        $("#accessories").append("<h3>Total: " + data[i].Total + "</h3>");
+        $("#accessories").append("<hr>");
+     // }
+      }
     }
-    
-     console.log(data);
+
+    console.log(data);
   });
 }

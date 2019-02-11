@@ -110,14 +110,15 @@ module.exports = function(app) {
       res.json(dbUserTable);
     });
   });
-  // app.get("/api/brands/:colegeId", function (req, res) {
-  //   db.Brand.findOne({ where: {
-  //     collegeId: req.params.collegeId
-  //   }
-  //  }).then(function (BrandsData) {
-  //     res.json(BrandsData);
-  //   });
-  // });
+
+  app.get("/api/college/:userid", function (req, res) {
+    db.UserTable.findOne({ where: {
+      id: req.params.userid
+    }
+   }).then(function (Data) {
+      res.json(Data);
+    });
+  });
 
 
 
