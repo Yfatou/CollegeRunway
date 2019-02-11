@@ -1,6 +1,7 @@
-// *********************************************************************************
-// html-routes.js - this file offers a set of routes for sending users to the various html pages
-// *********************************************************************************
+// *************************************************************************//
+// htmlRoutes.js - Definition and creation of a set of routes
+// These routes will be used for sending users to the various html pages
+// *************************************************************************//
 
 // Dependencies
 // =============================================================

@@ -1,3 +1,9 @@
+-- ************************************************************************************
+-- schema.sql - To be able to get the count needed to be displayed in the result table,
+-- some complex/long queries should be made
+-- For simplicity and cleaner code, views will be used
+-- ************************************************************************************
+
  use  collegerunway_db;
   DROP VIEW IF EXISTS `MostTopsView`;
  CREATE VIEW `MostTopsView` AS
