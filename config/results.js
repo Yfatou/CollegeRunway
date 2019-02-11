@@ -1,5 +1,5 @@
 // ===========================================================================//
-// Need an ORM too in order to query views
+// Need an ORM in thisproject in order to query views
 // Sequelize can not query views
 // ===========================================================================//
 

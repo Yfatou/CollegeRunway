@@ -1,14 +1,20 @@
 // Get references to page elements
+// pathArray will contains all the element of the url
+var pathArray = window.location.pathname.split("/");
 
-
-var pathArray = window.location.pathname.split('/');
+// The season selected by the user in the dropdown list
 var $seasonselect = $("#seasonselect");
 
+// Submit button on the homepage after choice of university and season
 var $submitBtn = $("#searchBtn");
+
+// College selected by the user in the dropdown list
 var $collegeselect = $("#collegeselect");
+
+// Submit button on the season pages after selecion of brands for clothing items
 var $submitButtonId = $("#submitButtonId");
 
-// The API object contains methods for each kind of request we'll make
+// The API object contains methods for each kind of request that will be made
 var API = {
   displayResult: function (url) {
     return $.ajax({

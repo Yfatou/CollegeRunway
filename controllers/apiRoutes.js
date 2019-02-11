@@ -62,28 +62,33 @@ module.exports = function(app) {
       });
   });
 
-  // Add the usetr information inyto the user table
+  // Add the college choosen by the user in the user table
   app.post("/api/addcollege", function(req, res) {
     console.log(req.body);
 
-    // Delete all the data
+    // Delete all the data if exists
     db.Colleges.destroy({ where: {} });
-
+    // Insert the informations entered by the user
     db.Colleges.bulkCreate(req.body, { returning: true });
   });
 
-
+  // Add the season choosen by the user in the user table
   app.post("/api/addseason", function(req, res) {
     console.log(req.body);
-
+    
+    // Delete all the data if exists
     db.SeasonTable.destroy({ where: {} });
+    // Insert the informations entered by the user
     db.SeasonTable.bulkCreate(req.body, { returning: true });
   });
 
+  // Add the informations enretered by the user on the season page - favorite brands - in the user table 
   app.post("/api/addbrand", function(req, res) {
     console.log(req.body);
 
+    // Delete all the data if exists
     db.Brands.destroy({ where: {} });
+    // Insert the informations entered by the user
     db.Brands.bulkCreate(req.body, { returning: true });
   });
 
