@@ -245,7 +245,7 @@ $submitButtonId.on("click", handleFormSeasonSubmit);
 if (pathArray[1] === "resultspage") {
  
   var collegename=sessionStorage.getItem("collegename");
-  $("#tops").append("<h3>" + collegename + "</h3>");
+  $("#resultspagecollege").append("<p>" + collegename + "</p>");
   var temptotal = 0;
   API.displayResult("/api/results/mosttopsview").then(function (data) {
     var collegeid = pathArray[2];
@@ -256,8 +256,8 @@ if (pathArray[1] === "resultspage") {
         temptotal = parseInt(data[i].Total);
          
       
-        $("#tops").append("<h3>Tops:" + data[i].Tops + "</h3>");
-        $("#tops").append("<h3>Total: " + data[i].Total + "</h3>");
+        $("#tops").append("<hr><hr><p>tops  -" + " " + data[i].Tops + "</p>");
+        // $("#tops").append("<h3>Total: " + data[i].Total + "</h3>");
         $("#tops").append("<hr>");
 
 
@@ -276,8 +276,8 @@ if (pathArray[1] === "resultspage") {
        // if (parseInt(data[i].Total) > temptotal) {
         temptotal = parseInt(data[i].Total);
         // $("#bottoms").append("<h3>College:" + data[i].name + "</h3>");
-        $("#bottoms").append("<h3>bottoms: " + data[i].bottoms + "</h3>");
-        $("#bottoms").append("<h3>Total: " + data[i].Total + "</h3>");
+        $("#bottoms").append("<p>bottoms  -" + " " + data[i].bottoms + "</p>");
+        // $("#bottoms").append("<h3>Total: " + data[i].Total + "</h3>");
         $("#bottoms").append("<hr>");
       }
 
@@ -294,8 +294,8 @@ if (pathArray[1] === "resultspage") {
       //  if (parseInt(data[i].Total) > temptotal) {
         temptotal = parseInt(data[i].Total);
         // $("#shoes").append("<h3>College:" + data[i].name + "</h3>");
-        $("#shoes").append("<h3>shoes:" + data[i].shoes + "</h3>");
-        $("#shoes").append("<h3>Total: " + data[i].Total + "</h3>");
+        $("#shoes").append("<p>shoes  -" + " " + data[i].shoes + "</p>");
+        // $("#shoes").append("<h3>Total: " + data[i].Total + "</h3>");
         $("#shoes").append("<hr>");
      // }
       }
@@ -310,8 +310,8 @@ if (pathArray[1] === "resultspage") {
      // if (parseInt(data[i].Total) > temptotal) {
         temptotal = parseInt(data[i].Total);
         // $("#accessories").append("<h3>College:" + data[i].name + "</h3>");
-        $("#accessories").append("<h3>accessories:" + data[i].Accessories + "</h3>");
-        $("#accessories").append("<h3>Total: " + data[i].Total + "</h3>");
+        $("#accessories").append("<p>accessories  -" + " " + data[i].Accessories + "</p>");
+        // $("#accessories").append("<h3>Total: " + data[i].Total + "</h3>");
         $("#accessories").append("<hr>");
      // }
       }
