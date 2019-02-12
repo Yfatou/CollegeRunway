@@ -207,15 +207,9 @@ $submitButtonId.on("click", handleFormSeasonSubmit);
 
 // If the url contains resultspage ==> the resut page will be displayed,
 if (pathArray[1] === "resultspage") {
-<<<<<<< HEAD
-  // the collegename stored from the session is displayed
-  var collegename = sessionStorage.getItem("collegename");
-  $("#tops").append("<h3>" + collegename + "</h3>");
-=======
  
   var collegename=sessionStorage.getItem("collegename");
   $("#resultspagecollege").append("<p>" + collegename + "</p>");
->>>>>>> master
   var temptotal = 0;
   // The most popular top is displayed
   API.displayResult("/api/results/mosttopsview").then(function(data) {
@@ -225,15 +219,10 @@ if (pathArray[1] === "resultspage") {
       if (data[i].name === collegename) {
         // if (parseInt(data[i].Total) > temptotal) {
         temptotal = parseInt(data[i].Total);
-<<<<<<< HEAD
-        $("#tops").append("<h3>Tops:" + data[i].Tops + "</h3>");
-        $("#tops").append("<h3>Total: " + data[i].Total + "</h3>");
-=======
          
       
         $("#tops").append("<hr><hr><p>tops  -" + " " + data[i].Tops + "</p>");
         // $("#tops").append("<h3>Total: " + data[i].Total + "</h3>");
->>>>>>> master
         $("#tops").append("<hr>");
       }
     }
@@ -267,16 +256,10 @@ if (pathArray[1] === "resultspage") {
         // if (parseInt(data[i].Total) > temptotal) {
         temptotal = parseInt(data[i].Total);
         // $("#shoes").append("<h3>College:" + data[i].name + "</h3>");
-<<<<<<< HEAD
-        $("#shoes").append("<h3>shoes:" + data[i].shoes + "</h3>");
-        $("#shoes").append("<h3>Total: " + data[i].Total + "</h3>");
-        $("#shoes").append("<hr>"); // }
-=======
         $("#shoes").append("<p>shoes  -" + " " + data[i].shoes + "</p>");
         // $("#shoes").append("<h3>Total: " + data[i].Total + "</h3>");
         $("#shoes").append("<hr>");
      // }
->>>>>>> master
       }
     }
     console.log(data);
@@ -291,15 +274,8 @@ if (pathArray[1] === "resultspage") {
         // if (parseInt(data[i].Total) > temptotal) {
         temptotal = parseInt(data[i].Total);
         // $("#accessories").append("<h3>College:" + data[i].name + "</h3>");
-<<<<<<< HEAD
-        $("#accessories").append(
-          "<h3>accessories:" + data[i].Accessories + "</h3>"
-        );
-        $("#accessories").append("<h3>Total: " + data[i].Total + "</h3>");
-=======
         $("#accessories").append("<p>accessories  -" + " " + data[i].Accessories + "</p>");
         // $("#accessories").append("<h3>Total: " + data[i].Total + "</h3>");
->>>>>>> master
         $("#accessories").append("<hr>");
         // }
       }
