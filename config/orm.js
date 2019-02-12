@@ -41,7 +41,6 @@ function objToSql(ob) {
 
 // ORM definition
 var orm = {
-
   // To select all the data from a table
   all: function(tableInput, cb) {
     var queryString = "SELECT * FROM " + tableInput + ";";
@@ -94,7 +93,7 @@ var orm = {
     });
   },
 
-  // To delete a row frpm a table
+  // To delete a row from a table
   delete: function(table, condition, cb) {
     var queryString = "DELETE FROM " + table;
     queryString += " WHERE ";
