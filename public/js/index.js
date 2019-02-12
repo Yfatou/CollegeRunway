@@ -211,8 +211,8 @@ if (pathArray[1] === "resultspage") {
       // for the college selected by the user
       if (data[i].name === collegename) {
         temptotal = parseInt(data[i].Total);
-        $("#tops").append("<hr><hr><p>tops  -" + " " + data[i].Tops + "</p>");
-        $("#tops").append("<hr>");
+        $("#tops").replaceWith("<hr><hr><p>tops  -" + " " + data[i].Tops + "</p>");
+        $("#tops").replaceWith("<hr>");
       }
     }
     console.log(data);
@@ -225,8 +225,8 @@ if (pathArray[1] === "resultspage") {
       // for the college selected by the user
       if (data[i].name === collegename) {
         temptotal = parseInt(data[i].Total);
-        $("#bottoms").append("<p>bottoms  -" + " " + data[i].bottoms + "</p>");
-        $("#bottoms").append("<hr>");
+        $("#bottoms").replaceWith("<p>bottoms  -" + " " + data[i].bottoms + "</p>");
+        $("#bottoms").replaceWith("<hr>");
       }
     }
     console.log(data);
@@ -239,8 +239,8 @@ if (pathArray[1] === "resultspage") {
       // for the college selected by the user
       if (data[i].name === collegename) {
         temptotal = parseInt(data[i].Total);
-        $("#shoes").append("<p>shoes  -" + " " + data[i].shoes + "</p>");
-        $("#shoes").append("<hr>");
+        $("#shoes").replaceWith("<p>shoes  -" + " " + data[i].shoes + "</p>");
+        $("#shoes").replaceWith("<hr>");
       }
     }
     console.log(data);
@@ -253,10 +253,10 @@ if (pathArray[1] === "resultspage") {
       // for the collede selected by the user
       if (data[i].name === collegename) {
         temptotal = parseInt(data[i].Total);
-        $("#accessories").append(
+        $("#accessories").replaceWith(
           "<p>accessories  -" + " " + data[i].Accessories + "</p>"
         );
-        $("#accessories").append("<hr>");
+        $("#accessories").replaceWith("<hr>");
       }
     }
 
