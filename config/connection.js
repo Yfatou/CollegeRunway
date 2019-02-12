@@ -1,4 +1,5 @@
 // Set up MySQL connection.
+// This connection will be used by the orm.
 var mysql = require("mysql");
 
 var connection = mysql.createConnection({
