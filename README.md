@@ -1,7 +1,11 @@
 # College Runway
 
-OVERVIEW
-We have built an app called "CollegeRunway" with MySQL, Node, Express, Handlebars and ORM. It uses Node and MySQL to query,Express package to handle routing, and Handlebars to generate HTML. CollegeRunway is an app dedicated to college students who are interested in Fashion and want to know the most trending brand in their college.I t will give to the user the top most popular brand of clothing (Bottom, Top, Shoes and accessories) in a chosen college.
+## Description
+Welcome to "CollegeRunway".
+This app has been built with college students interested in fashion in mind.
+
+This app, will tell the user the 
+with MySQL, Node, Express, Handlebars and ORM. It uses Node and MySQL to query,Express package to handle routing, and Handlebars to generate HTML. CollegeRunway is an app dedicated to college students who are interested in Fashion and want to know the most trending brand in their college.I t will give to the user the top most popular brand of clothing (Bottom, Top, Shoes and accessories) in a chosen college.
 The app will work in two ways:
 Getting the input from the user about their favorite brands according to seasons.
 Giving them back the most poular brand in their campus
