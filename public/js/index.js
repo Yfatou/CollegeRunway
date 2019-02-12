@@ -164,19 +164,7 @@ var handleFormSubmit = function(event) {
   });
 };
 
-// // handleDeleteBtnClick is called when an example's delete button is clicked
-// // Remove the example from the db and refresh the list
-// var handleDeleteBtnClick = function () {
-//   var idToDelete = $(this)
-//     .parent()
-//     .attr("data-id");
-
-//   API.deleteExample(idToDelete).then(function() {
-//     refreshExamples();
-//   });
-// };
-
-// HandleFormSeasonSubmit is called when the user submit the choices made on a season table
+// HandleFormSeasonSubmit is called when the user submit the choices made on a season page
 var handleFormSeasonSubmit = function() {
   var BrandChoice = {
     Tops: $("#top").val(),
@@ -199,7 +187,7 @@ var handleFormSeasonSubmit = function() {
   });
 };
 
-// Add event listeners to the submit and delete buttons
+// Event listeners to the submit button for the homepage
 $submitBtn.on("click", handleFormSubmit);
 
 // Event listener on the submit button for the seasons page
@@ -207,8 +195,8 @@ $submitButtonId.on("click", handleFormSeasonSubmit);
 
 // If the url contains resultspage ==> the resut page will be displayed,
 if (pathArray[1] === "resultspage") {
- 
-  var collegename=sessionStorage.getItem("collegename");
+  // The college stored from the session storage is displayed
+  var collegename = sessionStorage.getItem("collegename");
   $("#resultspagecollege").append("<p>" + collegename + "</p>");
   var temptotal = 0;
   // The most popular top is displayed
@@ -217,12 +205,8 @@ if (pathArray[1] === "resultspage") {
     for (var i = 0; i < data.length; i++) {
       // for the college selected by the user
       if (data[i].name === collegename) {
-        // if (parseInt(data[i].Total) > temptotal) {
         temptotal = parseInt(data[i].Total);
-         
-      
         $("#tops").append("<hr><hr><p>tops  -" + " " + data[i].Tops + "</p>");
-        // $("#tops").append("<h3>Total: " + data[i].Total + "</h3>");
         $("#tops").append("<hr>");
       }
     }
@@ -235,14 +219,10 @@ if (pathArray[1] === "resultspage") {
     for (var i = 0; i < data.length; i++) {
       // for the college selected by the user
       if (data[i].name === collegename) {
-        // if (parseInt(data[i].Total) > temptotal) {
         temptotal = parseInt(data[i].Total);
-        // $("#bottoms").append("<h3>College:" + data[i].name + "</h3>");
         $("#bottoms").append("<p>bottoms  -" + " " + data[i].bottoms + "</p>");
-        // $("#bottoms").append("<h3>Total: " + data[i].Total + "</h3>");
         $("#bottoms").append("<hr>");
       }
-      // }
     }
     console.log(data);
   });
@@ -253,13 +233,9 @@ if (pathArray[1] === "resultspage") {
     for (var i = 0; i < data.length; i++) {
       // for the college selected by the user
       if (data[i].name === collegename) {
-        // if (parseInt(data[i].Total) > temptotal) {
         temptotal = parseInt(data[i].Total);
-        // $("#shoes").append("<h3>College:" + data[i].name + "</h3>");
         $("#shoes").append("<p>shoes  -" + " " + data[i].shoes + "</p>");
-        // $("#shoes").append("<h3>Total: " + data[i].Total + "</h3>");
         $("#shoes").append("<hr>");
-     // }
       }
     }
     console.log(data);
@@ -271,13 +247,11 @@ if (pathArray[1] === "resultspage") {
     for (var i = 0; i < data.length; i++) {
       // for the collede selected by the user
       if (data[i].name === collegename) {
-        // if (parseInt(data[i].Total) > temptotal) {
         temptotal = parseInt(data[i].Total);
-        // $("#accessories").append("<h3>College:" + data[i].name + "</h3>");
-        $("#accessories").append("<p>accessories  -" + " " + data[i].Accessories + "</p>");
-        // $("#accessories").append("<h3>Total: " + data[i].Total + "</h3>");
+        $("#accessories").append(
+          "<p>accessories  -" + " " + data[i].Accessories + "</p>"
+        );
         $("#accessories").append("<hr>");
-        // }
       }
     }
 
