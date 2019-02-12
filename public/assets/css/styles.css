@@ -10,7 +10,6 @@
   width: 100%;
   height: 100%;
   max-width: 1600px;
-  /* max-height: 640px; */
   margin: 0 auto;
   margin-top: 0px;
   margin-bottom: 50px;
@@ -30,26 +29,13 @@
 
 }
 
-
 .col-sm-12 {
   font-size: 38px;
   font-family: 'Oleo Script Swash Caps', cursive;
   color: white;
-  /* text-shadow: 2px 2px 6px black; */
   text-align: center;
-  margin-bottom: 10px;
-  margin-top: 10px;
-  
+ 
 }
-/* .col-md-12 {
-  font-size: 30px;
-  font-family: 'Oleo Script Swash Caps', cursive;
-  color: white;
-  text-shadow: 2px 2px 6px black;
-  text-align: center;
-  margin-bottom: 10px;
-   */
-/* } */
 
 .surveytitle {
   font-size: 30px;
@@ -57,6 +43,7 @@
   color: white;
   text-shadow: 2px 2px 6px black;
   text-align: right;
+  margin-left: 70px;
   margin-bottom: 15px;
   
 }
@@ -100,8 +87,6 @@ div.slide-left header {
 
 
 .seasonalcontainer {
-  /* max-width: 1600px; */
-  /* height: 100%; */
   margin: 0 auto;
   margin-top: 20px;
   font-size: 70px;
@@ -109,20 +94,18 @@ div.slide-left header {
   font-family: 'Oleo Script Swash Caps', cursive;
   color: white;
   text-shadow: 5px 5px 9px black;
-  border: 1px blue;
 }
 
 .springcontainer {
   background-image: url('../images/spring1.jpg');
   background-position: left;
-/* background-size: cover; */
 }
 
 .summercontainer {
   background-image: url('../images/summer3.jpg');
   background-position: left;
-background-size: cover;
-background-repeat: no-repeat;
+  background-size: cover;
+  background-repeat: no-repeat;
 }
 
 .autumncontainer {
@@ -134,7 +117,6 @@ background-repeat: no-repeat;
 
 .wintercontainer {
   background-image: url('../images/winter1.jpg');
-   
   background-position: left;
   background-size: cover;
   background-repeat: no-repeat;
@@ -142,25 +124,18 @@ background-repeat: no-repeat;
  
 }
 
-
 .resultspageoutercontainer{
-
-  background-image: url('../images/plaid1.jpg');
+  background-image: url('../images/herreing1.jpg');
   background-position: left; 
+  height: 100%;
 
 }
 
-
 .resultspagecontainer {
-  /* background-image: url('../images/finalpagebg1.jpg'); */
   background-color: cornflowerblue;
   background-position: left;
-  /* background-size: cover; */
-  /* background-repeat: no-repeat; */
   max-width: 1200px;
-  max-height: 1000px;
-  /* margin: 0 auto; */
-  /* margin-top: 130px; */
+  height: auto;
   margin-left: 150px;
   font-size: 50px;
   text-align: center;
@@ -170,6 +145,22 @@ background-repeat: no-repeat;
   padding: 30px;
 }
 
+.resultcss {
+  font-family: 'Montserrat', sans-serif;
+  background-color:cornflowerblue;
+  color: white;
+  font-size: 65px;
+}
+
+#resultspagecollege {
+  font-size: 65px;
+  text-shadow: 3px 3px 4px black;
+}
+
+.resultspageclothing {
+  font-size: 45px;
+  text-shadow: 3px 3px 4px black;
+}
 
 .normalfont{
   font-family: 'Montserrat', sans-serif;
@@ -179,12 +170,6 @@ background-repeat: no-repeat;
 }
 
 .brandselection {
-  /* background-image: url('../images/palegreenbg.png') */
-  /* background-color: rgb(97, 22, 235); */
-    /* background-image: url('../images/runway4.jpg'); */
-    /* background-position: center; */
-    /* background-position: left; */
-    /* background-size: cover; */
     max-width: 1300px;
     height:auto;
     max-height: 1300px;
@@ -198,18 +183,3 @@ text-align: center;
   font-size: 16px;
 }
 
-.top-section, .lower-section{
-text-align: center; 
-}
-#label {
-color: black;
-font-size: 26px;
-}
-
-ul {
-  font-size: 26px;
-list-style-type: none;
-margin-left: 36px;
-padding: 50;
-
-}
