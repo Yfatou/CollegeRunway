@@ -1,9 +1,9 @@
 {
   "development": {
-    "username": "project2",
-    "password": "collegerunway",
-    "database": "collegerunway_db",
-    "host": "localhost",
+    "username": "tqa0dxgjcrfpthmc",
+    "password": "nmc45uqzefyhjohp",
+    "database": "rzyhpxnmo753sg2x",
+    "host": "wftuqljwesiffol6.cbetxkdyhwsb.us-east-1.rds.amazonaws.com",
     "dialect": "mysql"
   },
   "test": {

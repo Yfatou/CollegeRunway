@@ -205,7 +205,7 @@ if (pathArray[1] === "resultspage") {
   $("#resultspagecollege").append("<p>" + collegename + "</p>");
   var temptotal = 0;
   // The most popular top is displayed
-  API.displayResult("/api/results/mosttopsview").then(function(data) {
+  API.displayResult("/api/results/MostTopsView").then(function(data) {
     var collegeid = pathArray[2];
     for (var i = 0; i < data.length; i++) {
       // for the college selected by the user
@@ -220,7 +220,7 @@ if (pathArray[1] === "resultspage") {
 
   temptotal = 0;
   // The most popular brand of bottom is displayed
-  API.displayResult("/api/results/mostbottomsview").then(function(data) {
+  API.displayResult("/api/results/MostBottomsView").then(function(data) {
     for (var i = 0; i < data.length; i++) {
       // for the college selected by the user
       if (data[i].name === collegename) {
@@ -234,7 +234,7 @@ if (pathArray[1] === "resultspage") {
 
   temptotal = 0;
   // The most popular brand of shoes is displayed
-  API.displayResult("/api/results/mostshoesview").then(function(data) {
+  API.displayResult("/api/results/MostShoesView").then(function(data) {
     for (var i = 0; i < data.length; i++) {
       // for the college selected by the user
       if (data[i].name === collegename) {
@@ -248,7 +248,7 @@ if (pathArray[1] === "resultspage") {
 
   temptotal = 0;
   // The most popular brand of accessories is displayed
-  API.displayResult("/api/results/mostaccessoriesview").then(function(data) {
+  API.displayResult("/api/results/MostAccessoriesView").then(function(data) {
     for (var i = 0; i < data.length; i++) {
       // for the collede selected by the user
       if (data[i].name === collegename) {
