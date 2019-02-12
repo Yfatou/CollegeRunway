@@ -1,9 +1,15 @@
 -- ************************************************************************************
--- schema.sql - To be able to get the count needed to be displayed in the result table,
+-- schema.sql - 
+-- 1/ - Create the database
+-- 2/ To be able to get the count needed to be displayed in the result table,
 -- some complex/long queries should be made
 -- For simplicity and cleaner code, views will be used
 -- DISCLAIMER: Thank you to Phil who helped our group
 -- ************************************************************************************
+
+DROP DATABASE IF EXISTS collegerunway_db;
+
+CREATE DATABASE collegerunway_db;
 
 USE  collegerunway_db;
 

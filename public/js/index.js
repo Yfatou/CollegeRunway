@@ -1,3 +1,8 @@
+// *********************************************************************************
+// index.js: javascript file to handle all the events happenning on the html pages
+// In this file, also the informations on the resultpage are collected and displayed
+// DISCLAIMER: Thank you to Phil who helped our team figure out this part
+// *********************************************************************************
 // Get references to page elements
 // pathArray will contains all the element of the url
 var pathArray = window.location.pathname.split("/");
