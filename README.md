@@ -81,12 +81,4 @@ For the future, enhancements could be added to this aaplication:
  * Access the user's device camera (after authorization) to let them create fashion "selfies" that they can share on social media
 
 
-## Contributors to this project (GitHub account)
- - Darakshan Ahmed (https://github.com/dara9234)
- - Zach Garcia (https://github.com/Zgarcia72292)
- - Fatou Thiam (https://github.com/Yfatou)
- - Michael Worthington (https://github.com/MWorthington888)
-
- - Thank you to Phil, our instructor for his help
-
 
